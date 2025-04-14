@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>LAB2</title>
+        <link rel = "stylesheet" type = "text/css" href = "main.css">
+    </head>
+    <body>
+        <h1>Welcome to INTERNET-PROGRAMMING MOVIE SITE</h1>
+        <p><check><a href = "login.html">로그인</a>|<a href = "signup.html">
+            회원가입</a></check></p>
+        <form>
+            <p><label>이름: </label>
+               <input type = "text" name = "name" /></p>
+            <p><label>생일: </label>
+               <input name = "date" type = "date" /></p>
+            <p><label>성별: </label>
+                <label>남성
+                    <input name = "sex" type = "radio" value = "male" />
+                </label>
+                <label>여성
+                    <input name = "sex" type = "radio" value = "female" />
+                </label>
+            </p>
+            <p><label>학년: </label>
+               <input name = "grade" type = "number" min = "1" max = "4" 
+                step = "1" /></p>
+            <p><label>아이디: </label> 
+               <input type = "text" name = "id" /></p>
+            <p><label>비밀번호: </label>
+               <input name = "password" type = "password" /></p>
+            <p><label>이메일: </label>
+               <input name = "email" type = "email" /></p>
+            <p><label>보안질문: </label> 
+               <select name = "question">
+                    <option selected>질문을 선택하세요</option>
+               </select></p>
+            <p><label>답변: </label> 
+               <input type = "text" name = "answer" /></p>
+            <p><box1><input type = "submit" value = "Signup" /></box1>
+               <box2><input type = "reset" value = "Cancel" /></box2></p>
+        </form>
+    </body>
+</html>

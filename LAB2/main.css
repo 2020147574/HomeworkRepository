@@ -1,0 +1,51 @@
+h1{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+}
+
+check{
+    text-align: center;
+}
+
+form {
+    background-color: white;
+    padding: 1%;
+    margin: auto;
+    border-width: medium;
+    border-color: black;
+    border-style: solid;
+    width: 400px;
+    height: auto;
+}
+
+label{
+    flex: 1;
+    text-align: left;
+}
+
+input{
+    flex: 2;
+    text-align: center;
+    padding: 1px;
+}
+
+box1{
+    text-align: center;
+    background-color: lightgreen;
+    color: black;
+    padding: 1%;
+    border: none;
+    border-radius: 0.5%;
+    font-size: small;
+}
+
+box2{
+    text-align: center;
+    background-color: red;
+    color: white;
+    padding: 1%;
+    border: none;
+    border-radius: 0.5%;
+    font-size: small;
+}
