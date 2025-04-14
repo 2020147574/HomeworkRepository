@@ -9,41 +9,43 @@
         <h1>Welcome to INTERNET-PROGRAMMING MOVIE SITE</h1>
         <p><a href = "login.html">로그인</a>|<a href = "signup.html">회원가입</a>
         </p>
-        <form>
+        <form method = "get" autocomplete = "off">
             <p><label>이름: </label>
-                <get><input type = "text" name = "name" /></get>
+                <box><input type = "text" name = "name" autofocus /></box>
             </p>
             <p><label>생일: </label>
-               <get><input name = "date" type = "date" /></get>
+               <box><input name = "date" type = "date" /></box>
             </p>
             <p><label>성별: </label>
-                <label>남성
-                    <input name = "sex" type = "radio" value = "male" />
+                <label>
+                    <box><input name = "sex" type = "radio" value = "male" />
+                    남성</box>
                 </label>
-                <label>여성
-                    <input name = "sex" type = "radio" value = "female" />
+                <label>
+                    <box><input name = "sex" type = "radio" value = "female" />
+                    여성</box>
                 </label>
             </p>
             <p><label>학년: </label>
-               <get><input name = "grade" type = "number" min = "1" max = "4" 
-                step = "1" /></get>
+               <box><input name = "grade" type = "number" min = "1" max = "4" 
+                step = "1" /></box>
             </p>
             <p><label>아이디: </label> 
-               <get><input type = "text" name = "id" /></get>
+               <box><input type = "text" name = "id" required /></box>
             </p>
             <p><label>비밀번호: </label>
-               <get><input name = "password" type = "password" /></get>
+               <box><input name = "password" type = "password" required /></box>
             </p>
             <p><label>이메일: </label>
-               <get><input name = "email" type = "email" /></get>
+               <box><input name = "email" type = "email" /></box>
             </p>
             <p><label>보안질문: </label> 
-               <get><select name = "question">
+               <box><select name = "question">
                     <option selected>질문을 선택하세요</option>
-               </select></get>
+               </select></box>
             </p>
             <p><label>답변: </label> 
-               <get><input type = "text" name = "answer" /></get>
+               <box><input type = "text" name = "answer" /></box>
             </p>
             <p><box1><input type = "submit" value = "Signup" /></box1>
                <box2><input type = "reset" value = "Cancel" /></box2>

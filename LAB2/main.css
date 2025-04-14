@@ -20,30 +20,28 @@ form {
     height: auto;
 }
 
-get{
+box {
     padding: 1px;
-    margin: auto;
-    width: 100%;
+    margin: 0 8px;
+    width: 100px;
 }
 
 box1{
-    text-align: center;
     background-color: lightgreen;
     color: black;
     padding: 1%;
     border: none;
-    border-radius: 1%;
+    border-radius: 10%;
     width: 100%;
-    font-size: small;
+    font-size: medium;
 }
 
 box2{
-    text-align: center;
     background-color: red;
     color: white;
     padding: 1%;
     border: none;
-    border-radius: 1%;
+    border-radius: 10%;
     width: 100%;
-    font-size: small;
+    font-size: medium;
 }
