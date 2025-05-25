@@ -4,51 +4,6 @@
         <meta charset="utf-8">
         <title>LAB4</title>
         <link rel = "stylesheet" type = "text/css" href = "main.css">
-        
-    </head>
-    <body>
-        <h1>인프밍 영화 정보 사이트입니다.</h1>
-        <nav>
-            <div class = "flex-container navigation">
-                <div class="navi"><a href = "index.html">메인페이지</a></div>
-                <div class="navi"><a href = "login.html">로그인</a></div>
-                <div class="navi"><a href = "signup.html">회원가입</a></div>
-            </div>
-        </nav>        
-        <div class = "flex-container maincontent">
-            <div class = "flex-container subtitle">
-                <form id="searchForm" method = "get" autocomplete = "off">
-                    <p><input type = "text" name = "keyword" 
-                        placeholder = "키워드를 입력하세요" autofocus />
-                    </p>
-                </form>
-                <h3>Movies</h3>
-                <div class = "flex-container table">
-                    <aside>
-                        <form id="searchForm" method = "get" autocomplete = "off">
-                            <p><label>
-                                <input name = "arrange" type = "radio" value = "scoredown" />
-                                평점 내림차순
-                            </label></p>
-                            <p><label>
-                                <input name = "arrange" type = "radio" value = "scoreup" />
-                                평점 오름차순
-                            </label></p>
-                            <p><label>
-                                <input name = "arrange" type = "radio" value = "datedown" />
-                                개봉 내림차순
-                            </label></p>
-                            <p><label>
-                                <input name = "arrange" type = "radio" value = "dateup" />
-                                개봉 오름차순
-                            </label></p>
-                        </form>
-                    </aside>
-                    <main id="movieList">
-                    </main>
-                </div>
-            </div>
-        </div>
         <script>
             document.addEventListener("DOMContentLoaded", () => {
             const movieList = document.getElementById("movieList");
@@ -75,7 +30,7 @@
                         <div class="poster-container">
                             <img src="images/${movie.image}" alt="${movie.name}" />
                             <div class="movie-story">${movie.story}</div>
-                        </div>                        
+                        </div>
                         <h4>${movie.name}</h4>
                         <p><strong>개봉일:</strong> ${movie.date}</p>
                         <p><strong>평점:</strong> ${movie.score}</p>
@@ -126,5 +81,49 @@
             });
         });
         </script>
+    </head>
+    <body>
+        <h1>인프밍 영화 정보 사이트입니다.</h1>
+        <nav>
+            <div class = "flex-container navigation">
+                <div class="navi"><a href = "index.html">메인페이지</a></div>
+                <div class="navi"><a href = "login.html">로그인</a></div>
+                <div class="navi"><a href = "signup.html">회원가입</a></div>
+            </div>
+        </nav>        
+        <div class = "flex-container maincontent">
+            <div class = "flex-container subtitle">
+                <form id="searchForm" method = "get" autocomplete = "off">
+                    <p><input type = "text" name = "keyword" 
+                        placeholder = "키워드를 입력하세요" autofocus />
+                    </p>
+                </form>
+                <h3>Movies</h3>
+                <div class = "flex-container table">
+                    <aside>
+                        <form id="searchForm" method = "get" autocomplete = "off">
+                            <p><label>
+                                <input name = "arrange" type = "radio" value = "scoredown" />
+                                평점 내림차순
+                            </label></p>
+                            <p><label>
+                                <input name = "arrange" type = "radio" value = "scoreup" />
+                                평점 오름차순
+                            </label></p>
+                            <p><label>
+                                <input name = "arrange" type = "radio" value = "datedown" />
+                                개봉 내림차순
+                            </label></p>
+                            <p><label>
+                                <input name = "arrange" type = "radio" value = "dateup" />
+                                개봉 오름차순
+                            </label></p>
+                        </form>
+                    </aside>
+                    <main id="movieList">
+                    </main>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
