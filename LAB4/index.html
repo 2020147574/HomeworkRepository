@@ -17,7 +17,7 @@
         </nav>        
         <div class = "flex-container maincontent">
             <div class = "flex-container subtitle">
-                <form method = "get" autocomplete = "off">
+                <form id="searchForm" method = "get" autocomplete = "off">
                     <p><input type = "text" name = "keyword" 
                         placeholder = "키워드를 입력하세요" autofocus />
                     </p>
@@ -25,7 +25,7 @@
                 <h3>Movies</h3>
                 <div class = "flex-container table">
                     <aside>
-                        <form method = "get" autocomplete = "off">
+                        <form id="searchForm" method = "get" autocomplete = "off">
                             <p><label>
                                 <input name = "arrange" type = "radio" value = "scoredown" />
                                 평점 내림차순
@@ -44,76 +44,85 @@
                             </label></p>
                         </form>
                     </aside>
-                    <main>
-                        <div id="posts">
-                        </div>
+                    <main id="movieList">
                     </main>
                 </div>
             </div>
         </div>
         <script>
-            fetch('./product.json')
-            .then(response => {
-                if(!response.ok) {
-                    throw new Error(`HTTP error: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(json => initialize(json))
-            .catch(err => console.error(`Fetch problem: ${err.message}`));
+            document.addEventListener("DOMContentLoaded", () => {
+            const movieList = document.getElementById("movieList");
+            const searchInput = document.getElementById("searchInput");
+            const sortForm = document.getElementById("sortForm");
+            let movies = [];
 
-            function initialize(products) {
-                const main = document.querySelector('main');
+            // JSON 데이터 로드
+            fetch("product.json")
+                .then(response => response.json())
+                .then(data => {
+                    movies = data;
+                    renderMovies(movies);
+                })
+                .catch(error => console.error("데이터 로드 오류:", error));
 
-                let lastSearch = '';
-
-                let finalGroup;
-
-                finalGroup = products;
-                updateDisplay();
-
-                finalGroup = [];
-
-
-                function updateDisplay() {
-                    while (main.firstChild) {
-                        main.removeChild(main.firstChild);
-                    }
-
-                    if (finalGroup.length === 0) {
-                        const para = document.createElement('p');
-                        para.textContent = 'No results to display!';
-                        main.appendChild(para);
-                    }
-                    else {
-                        for (const product of finalGroup) {
-                            fetchBlob(product);
-                        }
-                    }
-                }
-
-                function showProduct(blob, product) {
-                    const objectURL = URL.createObjectURL(blob);
-
-                    const section = document.createElement('section');
-                    const heading = document.createElement('h2');
-                    const para = document.createElement('p');
-                    const image = document.createElement('img');
-
-                    section.setAttribute('class', product.type);
-                    heading.textContent = product.name.replace(product.name.charAt(0), product.name.charAt(0).toUpperCase());
-                    
-                    para.textContent = `$${product.price.toFixed(2)}`;
-
-                    image.src = objectURL;
-                    image.alt = product.name;
-
-                    main.appendChild(section);
-                    section.appendChild(heading);
-                    section.appendChild(para);
-                    section.appendChild(image);
-                }
+            // 영화 목록 렌더링 함수
+            function renderMovies(data) {
+                movieList.innerHTML = "";
+                data.forEach(movie => {
+                    const card = document.createElement("div");
+                    card.className = "movie-card";
+                    card.innerHTML = `
+                        <img src="images/${movie.image}" alt="${movie.name}" />
+                        <h4>${movie.name}</h4>
+                        <p><strong>개봉일:</strong> ${movie.date}</p>
+                        <p><strong>평점:</strong> ${movie.score}</p>
+                        <p>${movie.story}</p>
+                    `;
+                    movieList.appendChild(card);
+                });
             }
+
+            // 정렬 함수
+            function sortMovies(criteria) {
+                let sorted = [...movies];
+                switch (criteria) {
+                    case "scoredown":
+                        sorted.sort((a, b) => parseFloat(b.score) - parseFloat(a.score));
+                        break;
+                    case "scoreup":
+                        sorted.sort((a, b) => parseFloat(a.score) - parseFloat(b.score));
+                        break;
+                    case "datedown":
+                        sorted.sort((a, b) => new Date(b.date) - new Date(a.date));
+                        break;
+                    case "dateup":
+                        sorted.sort((a, b) => new Date(a.date) - new Date(b.date));
+                        break;
+                    default:
+                        break;
+                }
+                renderMovies(sorted);
+            }
+
+            // 검색 필터링 함수
+            function filterMovies(keyword) {
+                const filtered = movies.filter(movie =>
+                    movie.name.toLowerCase().includes(keyword.toLowerCase()) ||
+                    movie.story.toLowerCase().includes(keyword.toLowerCase())
+                );
+                renderMovies(filtered);
+            }
+
+            // 정렬 이벤트 리스너
+            sortForm.addEventListener("change", (e) => {
+                sortMovies(e.target.value);
+            });
+
+            // 검색 이벤트 리스너
+            searchInput.addEventListener("input", (e) => {
+                filterMovies(e.target.value);
+            });
+        });
         </script>
     </body>
 </html>

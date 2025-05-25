@@ -121,6 +121,28 @@ h1{
     font-size: x-large;
 }
 
+aside {
+    flex: 1;
+}
+
+main {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.movie-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+}
+
 .in {
     background-color: white;
     padding: 1%;
