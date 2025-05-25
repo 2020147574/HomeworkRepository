@@ -72,11 +72,13 @@
                     const card = document.createElement("div");
                     card.className = "movie-card";
                     card.innerHTML = `
-                        <img src="images/${movie.image}" alt="${movie.name}" />
+                        <div class="poster-container">
+                            <img src="images/${movie.image}" alt="${movie.name}" />
+                            <div class="movie-story">${movie.story}</div>
+                        </div>                        
                         <h4>${movie.name}</h4>
                         <p><strong>개봉일:</strong> ${movie.date}</p>
                         <p><strong>평점:</strong> ${movie.score}</p>
-                        <p>${movie.story}</p>
                     `;
                     movieList.appendChild(card);
                 });

@@ -54,37 +54,36 @@
     max-width: 1020px;
 }
 
-.item {
-    flex-direction: row;
+.poster-container {
     position: relative;
-    margin: 1%;
+    width: 100%;
 }
-.item img{  
-    transition: transform 2s;
-    transform: scale(1, 1);
+
+.poster-container img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
-.item:hover img{
-    transform: scale(4, 6);
-}
-.overlay-text{
+
+.movie-story {
     position: absolute;
     top: 0;
     left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
     width: 100%;
     height: 100%;
-    color: white;
-    -webkit-text-stroke: 1px black;
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 2s;
-    font-size: 30px;
-    text-align: center;
+    overflow-y: auto;
+    font-size: 0.9em;
 }
-.item:hover .overlay-text{
-    opacity: 1;;
+
+.poster-container:hover .movie-story {
+    opacity: 1;
 }
+
 
 @media screen {
     body {
