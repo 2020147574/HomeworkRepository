@@ -125,7 +125,7 @@ aside {
 }
 
 main {
-    flex: 3;
+    flex: 2;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
