@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>LAB4</title>
+        <link rel = "stylesheet" type = "text/css" href = "main.css">
+        
+    </head>
+    <body>
+        <h1>인프밍 영화 정보 사이트입니다.</h1>
+        <nav>
+            <div class = "flex-container navigation">
+                <div class="navi"><a href = "index.html">메인페이지</a></div>
+                <div class="navi"><a href = "login.html">로그인</a></div>
+                <div class="navi"><a href = "signup.html">회원가입</a></div>
+            </div>
+        </nav>        
+        <div class = "flex-container maincontent">
+            <div class = "flex-container subtitle">
+                <form method = "get" autocomplete = "off">
+                    <p><input type = "text" name = "keyword" 
+                        placeholder = "키워드를 입력하세요" autofocus />
+                    </p>
+                </form>
+                <h3>Movies</h3>
+                <div class = "flex-container table">
+                    <aside>
+                        <form method = "get" autocomplete = "off">
+                            <p><label>
+                                <input name = "arrange" type = "radio" value = "scoredown" />
+                                평점 내림차순
+                            </label></p>
+                            <p><label>
+                                <input name = "arrange" type = "radio" value = "scoreup" />
+                                평점 오름차순
+                            </label></p>
+                            <p><label>
+                                <input name = "arrange" type = "radio" value = "datedown" />
+                                개봉 내림차순
+                            </label></p>
+                            <p><label>
+                                <input name = "arrange" type = "radio" value = "dateup" />
+                                개봉 오름차순
+                            </label></p>
+                        </form>
+                    </aside>
+                    <main>
+                        <div id="posts">
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+        <script>
+            fetch('products.json')
+            .then(response => {
+                if(!response.ok) {
+                    throw new Error(`HTTP error: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(json => initialize(json))
+            .catch(err => console.error(`Fetch problem: ${err.message}`));
+
+            function initialize(products) {
+                const main = document.querySelector('main');
+
+                let lastSearch = '';
+
+                let finalGroup;
+
+                finalGroup = products;
+                updateDisplay();
+
+                finalGroup = [];
+
+
+                function updateDisplay() {
+                    while (main.firstChild) {
+                        main.removeChild(main.firstChild);
+                    }
+
+                    if (finalGroup.length === 0) {
+                        const para = document.createElement('p');
+                        para.textContent = 'No results to display!';
+                        main.appendChild(para);
+                    }
+                    else {
+                        for (const product of finalGroup) {
+                            fetchBlob(product);
+                        }
+                    }
+                }
+
+                function showProduct(blob, product) {
+                    const objectURL = URL.createObjectURL(blob);
+
+                    const section = document.createElement('section');
+                    const heading = document.createElement('h2');
+                    const para = document.createElement('p');
+                    const image = document.createElement('img');
+
+                    section.setAttribute('class', product.type);
+                    heading.textContent = product.name.replace(product.name.charAt(0), product.name.charAt(0).toUpperCase());
+                    
+                    para.textContent = `$${product.price.toFixed(2)}`;
+
+                    image.src = objectURL;
+                    image.alt = product.name;
+
+                    main.appendChild(section);
+                    section.appendChild(heading);
+                    section.appendChild(para);
+                    section.appendChild(image);
+                }
+            }
+        </script>
+    </body>
+</html>

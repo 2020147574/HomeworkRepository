@@ -1,0 +1,162 @@
+[
+    {
+        "id": 1,
+        "name": "Good Will Hunting",
+        "story": "Will Hunting has a genius-level IQ but chooses to work as a janitor at MIT. When he solves a difficult graduate-level math problem, his talents are discovered by Professor Gerald Lambeau, who decides to help the misguided youth reach his potential. When Will is arrested for attacking a police officer, Professor Lambeau makes a deal to get leniency for him if he will get treatment from therapist Sean Maguire.",
+        "date" : "1997-12-05",
+        "score": "7.9/10",
+        "image": "Good_Will_Hunting.jpg"
+    },
+    {
+        "id": 2,
+        "name": "A Beautiful Mind",
+        "story": "At Princeton University, John Nash struggles to make a worthwhile contribution to serve as his legacy to the world of mathematics. He finally makes a revolutionary breakthrough that will eventually earn him the Nobel Prize. After graduate school he turns to teaching, becoming romantically involved with his student Alicia. Meanwhile the government asks his help with breaking Soviet codes, which soon gets him involved in a terrifying conspiracy plot. Nash grows more and more paranoid until a discovery that turns his entire world upside down. Now it is only with Alicia's help that he will be able to recover his mental strength and regain his status as the great mathematician we know him as today..",
+        "date" : "2001-12-11",
+        "score": "7.7/10",
+        "image": "A_Beautiful_Mind.jpg"
+    },
+    {
+        "id": 3,
+        "name": "The Imitation Game",
+        "story": "Based on the real life story of legendary cryptanalyst Alan Turing, the film portrays the nail-biting race against time by Turing and his brilliant team of code-breakers at Britain's top-secret Government Code and Cypher School at Bletchley Park, during the darkest days of World War II.",
+        "date" : "2014-11-14",
+        "score": "8.0/10",
+        "image": "Good_Will_Hunting.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Shutter Island",
+        "story": "World War II soldier-turned-U.S. Marshal Teddy Daniels investigates the disappearance of a patient from a hospital for the criminally insane, but his efforts are compromised by his troubling visions and also by a mysterious doctor.",
+        "date" : "2010-02-18",
+        "score": "7.8/10",
+        "image": "Shutter_Island.jpg"
+    },
+    {
+        "id": 5,
+        "name": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+        "story": "Siblings Lucy, Edmund, Susan and Peter step through a magical wardrobe and find the land of Narnia. There, the they discover a charming, once peaceful kingdom that has been plunged into eternal winter by the evil White Witch, Jadis. Aided by the wise and magnificent lion, Aslan, the children lead Narnia into a spectacular, climactic battle to be free of the Witch's glacial powers forever.",
+        "date" : "2005-12-07",
+        "score": "6.7/10",
+        "image": "Narnia.jpg"
+    },
+    {
+        "id": 6,
+        "name": "The Professor and His Beloved Equation",
+        "story": "This is the story between single mother housekeeper and mathematics professor,who has a brain damage.",
+        "date" : "2006-01-21",
+        "score": "6.8/10",
+        "image": "The_Professor_and_His_Beloved_Equation.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Cube",
+        "story": "Seven strangers are taken out of their daily lives and placed mysteriously in a deadly cube where they all agree they must find their way out.",
+        "date" : "1997-09-09",
+        "score": "6.9/10",
+        "image": "Cube.jpg"
+    },
+    {
+        "id": 8,
+        "name": "The Social Network",
+        "story": "On a fall night in 2003, Harvard undergrad and computer programming genius Mark Zuckerberg sits down at his computer and heatedly begins working on a new idea. In a fury of blogging and programming, what begins in his dorm room as a small site among friends soon becomes a global social network and a revolution in communication. A mere six years and 500 million friends later, Mark Zuckerberg is the youngest billionaire in history... but for this entrepreneur, success leads to both personal and legal complications.",
+        "date" : "2010-09-30",
+        "score": "7.1/10",
+        "image": "The_Social_Network.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Blade Runner",
+        "story": "In the smog-choked dystopian Los Angeles of 2019, blade runner Rick Deckard is called out of retirement to terminate a quartet of replicants who have escaped to Earth seeking their creator for a way to extend their short life spans.",
+        "date" : "1982-06-25",
+        "score": "7.9/10",
+        "image": "Blade_Runner.jpg"
+    },
+    {
+        "id": 10,
+        "name": "I, Robot",
+        "story": "In 2035, where robots are common-place and abide by the three laws of robotics, a techno-phobic cop investigates an apparent suicide. Suspecting that a robot may be responsible for the death, his investigation leads him to believe that humanity may be in danger.",
+        "date": "2004-07-15",
+        "score": "6.7/10",
+        "image": "I_Robot.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Equilibrium",
+        "story": "In a dystopian future, a totalitarian regime maintains peace by subduing the populace with a drug, and displays of emotion are punishable by death. A man in charge of enforcing the law rises to overthrow the system.",
+        "date": "2002-12-06",
+        "score": "6.9/10",
+        "image": "Equilibrium.jpg"
+    },
+    {
+        "id": 12,
+        "name": "Wanted",
+        "story": "Doormat Wesley Gibson discovers that his recently murdered father – who Wesley never knew – belonged to a secret guild of assassins. After a leather-clad sexpot drafts Wesley into the society, he hones his innate killing skills and turns avenger.",
+        "date": "2008-06-19",
+        "score": "6.4/10",
+        "image": "Wanted.jpg"
+    },
+    {
+        "id": 13,
+        "name": "Back to the Future",
+        "story": "Eighties teenager Marty McFly is accidentally sent back in time to 1955, inadvertently disrupting his parents' first meeting and attracting his mother's romantic interest. Marty must repair the damage to history by rekindling his parents' romance and - with the help of his eccentric inventor friend Doc Brown - return to 1985.",
+        "date": "1985-07-03",
+        "score": "8.0/10",
+        "image": "Back_To_The_Future.jpg"
+    },
+    {
+        "id": 14,
+        "name": "GHOST IN THE SHELL",
+        "story": "In the year 2029, the barriers of our world have been broken down by the net and by cybernetics, but this brings new vulnerability to humans in the form of brain-hacking. When a highly-wanted hacker known as 'The Puppetmaster' begins involving them in politics, Section 9, a group of cybernetically enhanced cops, are called in to investigate and stop the Puppetmaster.",
+        "date": "1995-11-18",
+        "score": "7.8/10",
+        "image": "Ghost_In_The_Shell.jpg"
+    },
+    {
+        "id": 15,
+        "name": "Gattaca",
+        "story": "Science fiction drama about a future society in the era of indefinite eugenics where humans are set on a life course depending on their DNA. The young Vincent Freeman is born with a condition that would prevent him from space travel, yet he is determined to infiltrate the GATTACA space program.",
+        "date": "1997-09-07",
+        "score": "7.5/10",
+        "image": "Gattaca.jpg"
+    },
+    {
+        "id": 16,
+        "name": "The Matrix",
+        "story": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.",
+        "date": "1999-03-30",
+        "score": "7.9/10",
+        "image": "The_Matrix.jpg"
+    },
+    {
+        "id": 17,
+        "name": "Inception",
+        "story": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: \"inception\", the implantation of another person's idea into a target's subconscious.",
+        "date": "2010-07-14",
+        "score": "8.1/10",
+        "image": "Inception.jpg"
+    },
+    {
+        "id": 18,
+        "name": "Memento",
+        "story": "Suffering short-term memory loss after a head injury, Leonard Shelby embarks on a grim quest to find the lowlife who murdered his wife in this gritty, complex thriller that packs more knots than a hangman's noose. To carry out his plan, Shelby snaps Polaroids of people and places, jotting down contextual notes on the backs of photos to aid in his search and jog his memory. He even tattoos his own body in a desperate bid to remember.",
+        "date": "2000-10-11",
+        "score": "8.1/10",
+        "image": "Memento.jpg"
+    },
+    {
+        "id": 19,
+        "name": "Ex Machina",
+        "story": "Caleb, a 26 year old coder at the world's largest internet company, wins a competition to spend a week at a private mountain retreat belonging to Nathan, the reclusive CEO of the company. But when Caleb arrives at the remote location he finds that he will have to participate in a strange and fascinating experiment in which he must interact with the world's first true artificial intelligence, housed in the body of a beautiful robot girl.",
+        "date": "2015-01-21",
+        "score": "7.6/10",
+        "image": "Ex_Machina.jpg"
+    },
+    {
+        "id": 20,
+        "name": "Her",
+        "story": "In the not so distant future, Theodore, a lonely writer purchases a newly developed operating system designed to meet the user's every needs. To Theordore's surprise, a romantic relationship develops between him and his operating system. This unconventional love story blends science fiction and romance in a sweet tale that explores the nature of love and the ways that technology isolates and connects us all.",
+        "date": "2013-12-18",
+        "score": "7.9/10",
+        "image": "Her.jpg"
+    }
+]
