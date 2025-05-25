@@ -71,9 +71,11 @@
             }
 
             // 정렬 이벤트 리스너
-            sortForm.addEventListener("change", (e) => {
-                sortMovies(e.target.value);
-            });
+            if(sortForm){
+                sortForm.addEventListener("change", (e) => {
+                    sortMovies(e.target.value);
+                });
+            }
 
             // 검색 이벤트 리스너
             searchInput.addEventListener("input", (e) => {
