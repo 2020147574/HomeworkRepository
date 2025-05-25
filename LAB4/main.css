@@ -125,7 +125,10 @@ aside {
 }
 
 main {
-    flex: 1 1 calc(25% - 2%);
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .movie-card {
