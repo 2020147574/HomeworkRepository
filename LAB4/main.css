@@ -40,20 +40,6 @@
     max-width: 1020px;
 }
 
-.split {
-    display: flex;
-    flex-direction: row; 
-    padding: 1%;
-    margin: 1%;
-    flex: 1 1 auto;
-    text-align: left;
-    color: white;
-    border-width: thin;
-    border-color: black;
-    border-style: solid;
-    max-width: 1020px;
-}
-
 .poster-container {
     position: relative;
     width: 100%;
@@ -99,11 +85,6 @@
         text-align: left;
     }
 
-    .split{
-        flex: 1 1 calc(50% - 10%);
-        min-height: 400px;
-    }
-
 
     section {
         column-count: 2; column-gap: 30px; column-rule: 1px outset black;
@@ -134,7 +115,7 @@ main {
 .movie-card {
     border: 1px solid #ccc;
     padding: 10px;
-    width: 200px;
+    width: 300px;
 }
 
 .movie-card img {
