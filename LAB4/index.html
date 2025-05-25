@@ -78,9 +78,11 @@
             }
 
             // 검색 이벤트 리스너
-            searchInput.addEventListener("input", (e) => {
-                filterMovies(e.target.value);
-            });
+            if(searchInput){
+                searchInput.addEventListener("input", (e) => {
+                    filterMovies(e.target.value);
+                });
+            }
         });
         </script>
     </head>
