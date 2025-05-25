@@ -125,7 +125,7 @@ aside {
 }
 
 main {
-    flex: 1 1 calc(33% - 2%);
+    flex: 1 1 calc(25% - 2%);
 }
 
 .movie-card {
