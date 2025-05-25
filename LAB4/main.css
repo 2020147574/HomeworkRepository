@@ -64,6 +64,7 @@
     height: 100%;
     overflow-y: auto;
     font-size: 0.9em;
+    text-align: left;
 }
 
 .poster-container:hover .movie-story {
