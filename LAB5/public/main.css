@@ -1,0 +1,157 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.body{
+    max-width: 1020px;
+}
+
+.navi {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding: 1%;
+}
+
+.maincontent{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: thin solid black;
+    padding: 1%;
+    margin-top: 3%;
+    max-width: 1020px;
+}
+
+.subtitle{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1%;
+}
+
+.table {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    padding: 1%;
+    border-top: thin solid black;
+    max-width: 1020px;
+}
+.boxtable {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    padding: 1%;
+    background-color: lightgray;
+    max-width: 1020px;
+}
+
+.info{
+    display : flex;
+    flex-direction: column;
+    gap: 0%;
+}
+.poster-container {
+    position: relative;
+    width: 100%;
+}
+
+.poster-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+@media screen {
+    body {
+        text-align: left;
+    }
+
+    .navigation{
+        flex-direction: row;
+    }
+
+
+    .subtitle{
+        text-align: left;
+    }
+
+
+    section {
+        column-count: 2; column-gap: 30px; column-rule: 1px outset black;
+    }
+}
+
+ex{
+    text-align: center;
+}
+
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: x-large;
+}
+
+aside {
+    flex: 1;
+}
+
+main {
+    flex: 3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.movie-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+}
+
+.in {
+    background-color: white;
+    padding: 1%;
+    margin: auto;
+    text-align: left;
+    border-width: medium;
+    border-color: black;
+    border-style: solid;
+    width: 400px;
+    height: auto;
+}
+
+box {
+    padding: 1px;
+    margin: 0 25px;
+    width: 200px;
+}
+
+box1{
+    background-color: lightgreen;
+    color: black;
+    padding: 1%;
+    border: none;
+    border-radius: 10%;
+    width: 100%;
+    font-size: medium;
+}
+
+box2{
+    background-color: red;
+    color: white;
+    padding: 1%;
+    border: none;
+    border-radius: 10%;
+    width: 100%;
+    font-size: medium;
+}

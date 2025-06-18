@@ -1,0 +1,14 @@
+[
+  {
+    "movie_id": 1,
+    "comment": "정말 재밌었어요!"
+  },
+  {
+    "movie_id": 2,
+    "comment": "생각보다 별로였어요."
+  },
+  {
+    "movie_id": 1,
+    "comment": "좋아요"
+  }
+]
